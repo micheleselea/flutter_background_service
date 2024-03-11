@@ -249,6 +249,8 @@ public class BackgroundService extends Service implements MethodChannel.MethodCa
 
     @Override
     public void onTaskRemoved(Intent rootIntent) {
+        Toast.makeText(getApplicationContext(), "SeleaGate Service removed... Try auto-restart", Toast.LENGTH_LONG).show();
+        Log.d("SeleaGate","SeleaGate Service removed, trying auto-restart");
         if (isRunning.get()) {
             WatchdogReceiver.enqueue(getApplicationContext(), 1000);
         }
