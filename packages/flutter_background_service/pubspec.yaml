@@ -17,14 +17,17 @@ dependencies:
   flutter_background_service_platform_interface:
     git:
       url: https://github.com/micheleselea/flutter_background_service
+      ref: master
       path: packages/flutter_background_service_platform_interface/
   flutter_background_service_android:
       git:
         url: https://github.com/micheleselea/flutter_background_service
+        ref: master
         path: packages/flutter_background_service_android/
   flutter_background_service_ios:    
     git:
       url: https://github.com/micheleselea/flutter_background_service
+      ref: master
       path: packages/flutter_background_service_ios/
 dev_dependencies:
   flutter_test:
