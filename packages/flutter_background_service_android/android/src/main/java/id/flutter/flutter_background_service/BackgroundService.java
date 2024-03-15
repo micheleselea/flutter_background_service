@@ -302,6 +302,12 @@ public class BackgroundService extends Service implements MethodChannel.MethodCa
                 return;
             }
 
+            if (method.equalsIgnoreCase("isAutoStartOnBootMode")) {
+                boolean value = config.isAutoStartOnBoot();
+                result.success(value);
+                return;
+            }
+
             if (method.equalsIgnoreCase("stopService")) {
                 isManuallyStopped = true;
                 WatchdogReceiver.remove(this);
