@@ -13,6 +13,7 @@ dependencies:
 
   flutter_background_service_platform_interface:
     url: https://github.com/micheleselea/flutter_background_service.git
+      ref: master
       path: packages/flutter_background_service_platform_interface/
 
 dev_dependencies:
