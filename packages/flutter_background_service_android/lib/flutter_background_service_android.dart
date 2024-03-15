@@ -219,6 +219,11 @@ class AndroidServiceInstance extends ServiceInstance {
     return result ?? false;
   }
 
+  Future<bool> isAutoStartOnBootMode() async {
+    final result = await _channel.invokeMethod<bool>('isAutoStartOnBootMode');
+    return result ?? false;
+  }
+  
   Future<bool> setAutoStartOnBootMode(bool value) async {
     final result = await _channel.invokeMethod("setAutoStartOnBootMode", {
       "value": value,
