@@ -199,16 +199,18 @@ class AndroidServiceInstance extends ServiceInstance {
     });
   }
 
-  Future<void> setAsForegroundService() async {
-    await _channel.invokeMethod("setForegroundMode", {
+  Future<bool> setAsForegroundService() async {
+    final result = await _channel.invokeMethod("setForegroundMode", {
       'value': true,
     });
+    return result ?? false;
   }
 
-  Future<void> setAsBackgroundService() async {
-    await _channel.invokeMethod("setForegroundMode", {
+  Future<bool> setAsBackgroundService() async {
+    final result = await _channel.invokeMethod("setForegroundMode", {
       'value': false,
     });
+    return result ?? false;
   }
 
   /// returns true when the current Service instance is in foreground mode.
@@ -217,10 +219,11 @@ class AndroidServiceInstance extends ServiceInstance {
     return result ?? false;
   }
 
-  Future<void> setAutoStartOnBootMode(bool value) async {
-    await _channel.invokeMethod("setAutoStartOnBootMode", {
+  Future<bool> setAutoStartOnBootMode(bool value) async {
+    final result = await _channel.invokeMethod("setAutoStartOnBootMode", {
       "value": value,
     });
+    return result ?? false;
   }
 
   Future<bool> openApp() async {
