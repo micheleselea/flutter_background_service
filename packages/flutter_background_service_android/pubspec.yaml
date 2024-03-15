@@ -11,8 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_background_service_platform_interface:
-    url: https://github.com/micheleselea/flutter_background_service/tree/master/packages/flutter_background_service_platform_interface
+  flutter_background_service_platform_interface: ^5.0.0
 
 dev_dependencies:
   flutter_test:
